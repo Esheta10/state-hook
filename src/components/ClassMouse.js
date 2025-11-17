@@ -21,6 +21,9 @@ class ClassMouse extends Component {
     // Adding event listener to track mouse movement
     window.addEventListener("mousemove", this.logMousePosition);
   }
+  componentWillUnmount(){
+    window.removeEventListener("mousemove",this.logMousePosition);
+  }
   render() {
     return (
       <div>
