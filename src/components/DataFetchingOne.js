@@ -7,7 +7,7 @@ function DataFetchingOne(){
     const [post,setPost] = useState({})
 
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.org/users/1`)
+        axios.get(`https://jsonplaceholder.typicode.com/posts/2`)
         .then(response => {
             setLoading(false)
             setPost(response.data)
@@ -18,7 +18,7 @@ function DataFetchingOne(){
             setPost({})
             setError("Something went wrong!")
         })
-    })
+    },[])
    
     return (
         <div>
